@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Personal Finance Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>💰 Daily Finance Tracker</h1>
+    <p>Track your income, spending, and pay off your debts</p>
+  </header>
+
+  <main>
+    <!-- INCOME TRACKER -->
+    <section>
+      <h2>Daily Income</h2>
+      <input type="number" id="incomeInput" placeholder="Enter today's income" />
+      <button onclick="addIncome()">Add Income</button>
+      <p>Total Income: Ksh <span id="totalIncome">0</span></p>
+    </section>
+
+    <!-- SPENDING TRACKER -->
+    <section>
+      <h2>Daily Spending</h2>
+      <input type="number" id="spendInput" placeholder="Enter spending amount" />
+      <button onclick="addSpending()">Add Spending</button>
+      <p>Total Spending: Ksh <span id="totalSpending">0</span></p>
+    </section>
+
+    <!-- DEBT TRACKER -->
+    <section>
+      <h2>Debt Snowball Calculator</h2>
+      <p>Enter your debts (smallest first):</p>
+      <textarea id="debtsInput" placeholder="e.g. 5000, 7000, 3000"></textarea><br/>
+      <input type="number" id="monthlyPayment" placeholder="Monthly payment budget" /><br/>
+      <button onclick="calculateSnowball()">Calculate Payoff</button>
+      <div id="snowballOutput"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Made by You – Keep winning financially 💪</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
